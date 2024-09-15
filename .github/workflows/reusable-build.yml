@@ -224,7 +224,7 @@ jobs:
             exit 1
           else
             echo "${{ secrets.KERNEL_PRIVKEY }}" > certs/private_key.priv
-            echo "${{ secrets.AKMOD_PRIVKEY_20230518 }}" > certs/private_key_2.priv
+            echo "${{ secrets.AKMOD_PRIVKEY }}" > certs/private_key_2.priv
             # DEBUG: get character count of key
             wc -c certs/private_key.priv
             wc -c certs/private_key_2.priv
