@@ -30,8 +30,6 @@ jobs:
       matrix:
         kernel_flavor:
           - asus
-          - fsync
-          - fsync-ba
           - bazzite
           - surface
           - main
@@ -43,10 +41,6 @@ jobs:
         exclude:
           - fedora_version: 40
             kernel_flavor: asus
-          - fedora_version: 41
-            kernel_flavor: fsync
-          - fedora_version: 41
-            kernel_flavor: fsync-ba
           - fedora_version: 40
             kernel_flavor: bazzite
           - fedora_version: 40
@@ -57,7 +51,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Pull Image
-        uses: Wandalen/wretry.action@v3.7.3
+        uses: Wandalen/wretry.action@v3.8.0
         with:
           attempt_limit: 3
           attempt_delay: 15000
@@ -68,7 +62,7 @@ jobs:
 
       - name: Get Kernel Version
         id: Version
-        uses: Wandalen/wretry.action@v3.7.3
+        uses: Wandalen/wretry.action@v3.8.0
         with:
           attempt_limit: 3
           attempt_delay: 15000
@@ -311,7 +305,7 @@ jobs:
           string: ${{ env.IMAGE_REGISTRY }}
 
       - name: Push to GHCR
-        uses: Wandalen/wretry.action@v3.7.3
+        uses: Wandalen/wretry.action@v3.8.0
         id: push
         if: github.event_name != 'pull_request'
         env:
