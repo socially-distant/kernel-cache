@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/socially-distant/kernel-cache/compare/v1.1.0...v1.1.1) (2025-05-17)
+
+
+### Bug Fixes
+
+* update repo ([1f5ccc9](https://github.com/socially-distant/kernel-cache/commit/1f5ccc9dbf025a1aff5e7d2b67ab781abbd13625))
+
 ## [1.1.0](https://github.com/apoordev/kernel-cache/compare/v1.0.0...v1.1.0) (2024-12-22)
 
 
